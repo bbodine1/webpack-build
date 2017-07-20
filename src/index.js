@@ -1,7 +1,3 @@
-import 'file-loader?name=[name].[ext]!./index.html';
 import './style.scss';
 
-
-function component() {
-
-}
+console.log('Hello from index.js');
