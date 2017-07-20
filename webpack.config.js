@@ -2,11 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var outputDir = 'dist';
+
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, outputDir),
     filename: 'bundle.js'
   },
 
@@ -36,7 +38,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, outputDir),
     compress: true,
     port: 8080,
     stats: '',
